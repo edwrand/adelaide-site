@@ -14,13 +14,14 @@ export function Header() {
     <header className="flex flex-col items-center pt-10 pb-6 px-6">
       {/* Clicking the logo returns to home */}
       <Link href="/" className="flex flex-col items-center mb-2 hover:opacity-85 transition-opacity duration-150">
-        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+        <div className="logo-wrap" style={{ display: "flex", alignItems: "center", gap: 12 }}>
           <Image
             src="/assets/liquid.png"
             alt="Liquid"
             width={190}
             height={90}
             priority
+            className="logo-img"
             style={{ objectFit: "contain" }}
           />
           <Image
@@ -29,12 +30,13 @@ export function Header() {
             width={220}
             height={77}
             priority
+            className="logo-img-right"
             style={{ objectFit: "contain" }}
           />
         </div>
       </Link>
 
-      <nav className="flex flex-wrap items-center justify-center gap-6 mt-4">
+      <nav className="nav-wrap flex flex-wrap items-center justify-center gap-6 mt-4">
         {navItems.map((item) => (
           <Link
             key={item.href}
@@ -47,6 +49,7 @@ export function Header() {
               alt={item.alt}
               width={item.width}
               height={item.height}
+              className="nav-img"
               style={{ objectFit: "contain" }}
             />
           </Link>

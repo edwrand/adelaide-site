@@ -3,10 +3,11 @@ import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <div style={{ maxWidth: 720, margin: "0 auto", padding: "40px 24px 80px" }}>
+    <div className="page-wrap" style={{ maxWidth: 720, margin: "0 auto", padding: "40px 24px 80px" }}>
       <PageHeader title="About" sub="the person behind smooth witch" />
 
       <div
+        className="about-layout"
         style={{
           display: "flex",
           flexWrap: "wrap",
@@ -17,6 +18,7 @@ export default function AboutPage() {
       >
         {/* Portrait + signature */}
         <div
+          className="about-portrait"
           style={{
             display: "flex",
             flexDirection: "column",

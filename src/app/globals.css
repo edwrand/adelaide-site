@@ -31,3 +31,40 @@ body {
 .page-enter {
   animation: fadeUp 0.45s ease-out;
 }
+
+/* Prevent any image from blowing out the layout */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 640px) {
+  /* Header logo */
+  .logo-wrap { gap: 6px !important; }
+  .logo-img       { width: 115px !important; }
+  .logo-img-right { width: 135px !important; }
+
+  /* Header nav */
+  .nav-wrap { gap: 8px !important; margin-top: 8px !important; }
+  .nav-img  { width: 58px !important; height: auto !important; }
+
+  /* Page headings */
+  main h1 { font-size: 2rem !important; }
+  main h2 { font-size: 1.5rem !important; }
+
+  /* Hero image row */
+  .hero-images { gap: 12px !important; }
+  .hero-img    { width: 36vw !important; height: auto !important; }
+
+  /* Tighten page padding */
+  .page-wrap { padding: 24px 16px 48px !important; }
+
+  /* About portrait / bio stack */
+  .about-layout { gap: 24px !important; }
+  .about-portrait { width: 160px !important; }
+
+  /* Grids: allow 2 cols on mobile */
+  .grid-2col {
+    grid-template-columns: repeat(auto-fill, minmax(min(200px, 44%), 1fr)) !important;
+  }
+}

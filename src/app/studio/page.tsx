@@ -25,7 +25,7 @@ const placeholders = [
 
 export default function StudioPage() {
   return (
-    <div style={{ maxWidth: 900, margin: "0 auto", padding: "40px 24px 80px" }}>
+    <div className="page-wrap" style={{ maxWidth: 900, margin: "0 auto", padding: "40px 24px 80px" }}>
       <PageHeader title="The Studio" sub="original drawings & illustrations" />
 
       <p
@@ -46,7 +46,7 @@ export default function StudioPage() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(230px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fill, minmax(min(230px, 44%), 1fr))",
           gap: 28,
         }}
       >

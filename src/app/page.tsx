@@ -26,6 +26,7 @@ export default function HomePage() {
         </p>
 
         <div
+          className="hero-images"
           style={{
             display: "flex",
             flexWrap: "wrap",
@@ -39,6 +40,7 @@ export default function HomePage() {
             alt="Mushroom character illustration"
             width={260}
             height={300}
+            className="hero-img"
             style={{ objectFit: "contain" }}
           />
           <Image
@@ -46,6 +48,7 @@ export default function HomePage() {
             alt="Ink portrait"
             width={190}
             height={270}
+            className="hero-img"
             style={{ objectFit: "contain" }}
           />
           <Image
@@ -53,6 +56,7 @@ export default function HomePage() {
             alt="I Am Art"
             width={200}
             height={200}
+            className="hero-img"
             style={{ objectFit: "contain" }}
           />
         </div>
@@ -80,7 +84,7 @@ export default function HomePage() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(210px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fill, minmax(min(210px, 44%), 1fr))",
             gap: 24,
             maxWidth: 820,
             width: "100%",

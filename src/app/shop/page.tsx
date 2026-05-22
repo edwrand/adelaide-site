@@ -59,7 +59,7 @@ export default function ShopPage() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fill, minmax(min(240px, 44%), 1fr))",
           gap: 28,
           marginBottom: 56,
         }}
@@ -160,7 +160,7 @@ export default function ShopPage() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(190px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fill, minmax(min(190px, 44%), 1fr))",
           gap: 20,
         }}
       >
