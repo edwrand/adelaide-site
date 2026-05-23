@@ -33,7 +33,7 @@ export default function ContactPage() {
       >
         <SocialLink href="#" label="Instagram" icon="📸" />
         <SocialLink href="#" label="TikTok" icon="🎵" />
-        <SocialLink href="mailto:hello@smoothwitch.com" label="Email" icon="✉️" />
+        <SocialLink href="mailto:adelaiderand@gmail.com" label="Email" icon="✉️" />
       </div>
     </div>
   );

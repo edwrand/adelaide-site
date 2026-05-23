@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function AboutPage() {
   return (
     <div className="page-wrap" style={{ maxWidth: 720, margin: "0 auto", padding: "40px 24px 80px" }}>
-      <PageHeader title="About" sub="the person behind smooth witch" />
+      <PageHeader title="About" sub="the person behind Liquid Monday" />
 
       <div
         className="about-layout"
@@ -56,41 +56,6 @@ export default function AboutPage() {
 
         {/* Bio text */}
         <div style={{ flex: "1 1 280px" }}>
-          <p
-            style={{
-              fontSize: "1.4rem",
-              lineHeight: 1.7,
-              fontFamily: "var(--font-caveat), cursive",
-              marginBottom: 20,
-            }}
-          >
-            Hi, I&apos;m Adelaide — also known as Smooth Witch online. I&apos;m
-            an artist, illustrator, and photographer based wherever my sketchbook
-            is.
-          </p>
-          <p
-            style={{
-              fontSize: "1.4rem",
-              lineHeight: 1.7,
-              fontFamily: "var(--font-caveat), cursive",
-              marginBottom: 20,
-              opacity: 0.8,
-            }}
-          >
-            I draw mostly in ink and crayon. I shoot mostly on film. I make
-            things that feel a little strange and hopefully a lot honest.
-          </p>
-          <p
-            style={{
-              fontSize: "1.4rem",
-              lineHeight: 1.7,
-              fontFamily: "var(--font-caveat), cursive",
-              opacity: 0.8,
-            }}
-          >
-            This site is a home for everything I make — a little studio, a
-            little gallery, a little shop. Come in, look around, stay a while.
-          </p>
 
           <div style={{ marginTop: 36, display: "flex", gap: 24, flexWrap: "wrap" }}>
             <Link href="/studio">

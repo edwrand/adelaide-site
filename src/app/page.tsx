@@ -6,25 +6,6 @@ export default function HomePage() {
     <div>
       {/* Hero */}
       <section className="flex flex-col items-center px-6 pt-10 pb-16">
-        <p
-          style={{
-            fontSize: "2rem",
-            fontWeight: 600,
-            textAlign: "center",
-            letterSpacing: "0.02em",
-            maxWidth: 480,
-            lineHeight: 1.3,
-            marginBottom: 48,
-            fontFamily: "var(--font-caveat), cursive",
-          }}
-        >
-          Art, illustration &amp; photography
-          <br />
-          <span style={{ fontWeight: 400, fontSize: "1.6rem", opacity: 0.6 }}>
-            made with strange love
-          </span>
-        </p>
-
         <div
           className="hero-images"
           style={{
@@ -114,45 +95,6 @@ export default function HomePage() {
 
       <Squiggle />
 
-      {/* About blurb */}
-      <section
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          padding: "56px 24px",
-          maxWidth: 640,
-          margin: "0 auto",
-        }}
-      >
-        <SectionTitle>Hello!</SectionTitle>
-        <p
-          style={{
-            fontSize: "1.4rem",
-            lineHeight: 1.55,
-            textAlign: "center",
-            marginTop: 16,
-            opacity: 0.75,
-            fontFamily: "var(--font-caveat), cursive",
-          }}
-        >
-          I&apos;m Adelaide — I make drawings, take photos, and sometimes sell
-          things. Welcome to my little corner of the internet.
-        </p>
-        <Link href="/about" style={{ marginTop: 28 }}>
-          <span
-            style={{
-              fontSize: "1.25rem",
-              fontWeight: 600,
-              borderBottom: "2.5px solid currentColor",
-              paddingBottom: 2,
-              fontFamily: "var(--font-caveat), cursive",
-            }}
-          >
-            More about me →
-          </span>
-        </Link>
-      </section>
     </div>
   );
 }
