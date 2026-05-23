@@ -1,12 +1,21 @@
-const photoPlaceholders = [
-  { label: "Golden hour", size: "tall" },
-  { label: "Still life", size: "wide" },
-  { label: "Texture study", size: "tall" },
-  { label: "Street scene", size: "square" },
-  { label: "Self portrait", size: "tall" },
-  { label: "Window light", size: "wide" },
-  { label: "Close up", size: "square" },
-  { label: "Landscape", size: "wide" },
+import Image from "@/components/Img";
+
+const photos = [
+  "IMG_0033.png",
+  "IMG_0055.jpeg",
+  "IMG_0072.png",
+  "IMG_1280.jpg",
+  "IMG_1286.jpg",
+  "IMG_1303.jpg",
+  "IMG_1370 (1).jpg",
+  "IMG_1370.jpg",
+  "IMG_2892.jpg",
+  "IMG_3237.jpg",
+  "IMG_3240.jpg",
+  "IMG_3241.jpg",
+  "IMG_3242.jpg",
+  "IMG_6585.jpg",
+  "IMG_6586.jpg",
 ];
 
 export default function PhotosPage() {
@@ -14,96 +23,33 @@ export default function PhotosPage() {
     <div style={{ maxWidth: 900, margin: "0 auto", padding: "40px 24px 80px" }}>
       <PageHeader title="Photos" sub="film & digital photography" />
 
-      <p
-        style={{
-          fontSize: "1.3rem",
-          lineHeight: 1.6,
-          opacity: 0.7,
-          maxWidth: 520,
-          margin: "0 auto 48px",
-          textAlign: "center",
-          fontFamily: "var(--font-caveat), cursive",
-        }}
-      >
-        Moments caught on film and digital — mostly light, texture, and things
-        that made me stop walking.
-      </p>
-
-      {/* Masonry-style grid */}
       <div
         style={{
           columns: "3 220px",
           columnGap: 20,
         }}
       >
-        {photoPlaceholders.map((photo, i) => (
+        {photos.map((filename) => (
           <div
-            key={i}
+            key={filename}
             style={{
               marginBottom: 20,
               breakInside: "avoid",
-              border: "2px dashed #1a1a1a",
+              border: "2px solid #1a1a1a",
               borderRadius: 4,
               overflow: "hidden",
-              aspectRatio:
-                photo.size === "tall"
-                  ? "3/4"
-                  : photo.size === "wide"
-                  ? "4/3"
-                  : "1/1",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: 10,
-              opacity: 0.38,
-              background: "#f5f5f2",
+              background: "#fff",
             }}
           >
-            <svg
-              width="36"
-              height="36"
-              viewBox="0 0 36 36"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-            >
-              <rect x="2" y="6" width="32" height="24" rx="3" />
-              <circle cx="18" cy="18" r="7" />
-              <circle cx="28" cy="10" r="2" fill="currentColor" />
-            </svg>
-            <span
-              style={{
-                fontSize: "1.05rem",
-                fontFamily: "var(--font-caveat), cursive",
-              }}
-            >
-              {photo.label}
-            </span>
-            <span
-              style={{
-                fontSize: "0.9rem",
-                fontFamily: "var(--font-caveat), cursive",
-                opacity: 0.7,
-              }}
-            >
-              coming soon
-            </span>
+            <Image
+              src={`/assets/${filename}`}
+              alt={filename}
+              width={600}
+              height={800}
+              style={{ width: "100%", height: "auto", display: "block" }}
+            />
           </div>
         ))}
-      </div>
-
-      <div
-        style={{
-          textAlign: "center",
-          marginTop: 48,
-          fontSize: "1.15rem",
-          opacity: 0.5,
-          fontFamily: "var(--font-caveat), cursive",
-        }}
-      >
-        Photos uploading soon — check back!
       </div>
     </div>
   );
